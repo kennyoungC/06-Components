@@ -32,6 +32,9 @@
       .accordion {
         width: 700px;
         margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
       }
       .item {
         box-shadow: 0 0 32px rgba(0,0,0,0.1 );
@@ -46,7 +49,7 @@
       .text {
         font-size: 24px;
         font-weight: 500;
-        color: #087f5b;
+        /* color: #087f5b; */
       }
       .text {
       }
@@ -56,10 +59,21 @@
       }
       .hidden-box {
         grid-column: 2;
+        display: none;
+      }
+      .hidden .number{
+        color:#e9ecef ;
       }
       .hidden-box p {
         line-height: 1.6;
-        margin-bottom: 24px;
+        margin-bottom: 24px;      
+      }
+      .open .hidden-box{
+        display: block;
+      }
+      .open .text, .open .number {
+        color:#087f5b ;
+        
       }
       .hidden-box ul {
         color: #868e96;
@@ -73,6 +87,7 @@
     <title>Accordion Component</title>
   </head>
   <body>
+    <div class="accordion">
     <div class="item">
       <p class="number">01</p>
       <p class="text">where are these chairs assembled?</p>
@@ -112,8 +127,8 @@
         </ul>
       </div>
     </div>
-    <div class="accordion">
-      <div class="item">
+    
+      <div class="item open">
         <p class="number">02</p>
         <p class="text">How long do i have to return the chair?</p>
         <svg
@@ -152,7 +167,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    
     <div class="item">
       <p class="number">03</p>
       <p class="text">Do you ship to countries outside the EU?</p>
@@ -192,5 +207,6 @@
         </ul>
       </div>
     </div>
+  </div>
   </body>
 </html>
