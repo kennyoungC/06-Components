@@ -26,19 +26,56 @@
       body {
         font-family: "inter", sans-serif;
         color: #343a40;
+        line-height: 1;
       }
 
       .accordion {
         width: 700px;
         margin: 100px auto;
       }
+      .item {
+        box-shadow: 0 0 32px rgba(0,0,0,0.1 );
+        padding: 24px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 16px;
+        row-gap: 24px;
+        align-items: center;
+      }
+      .number,
+      .text {
+        font-size: 24px;
+        font-weight: 500;
+        color: #087f5b;
+      }
+      .text {
+      }
+      .icon {
+        width: 24px;
+        stroke: #087f5b;
+      }
+      .hidden-box {
+        grid-column: 2;
+      }
+      .hidden-box p {
+        line-height: 1.6;
+        margin-bottom: 24px;
+      }
+      .hidden-box ul {
+        color: #868e96;
+        margin-left: 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
     </style>
     <title>Accordion Component</title>
   </head>
   <body>
-    <div class="accordion">
-      <p class="number">02</p>
-      <p class="header-text">How long do i have to return the chair?</p>
+    <div class="item">
+      <p class="number">01</p>
+      <p class="text">where are these chairs assembled?</p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="icon"
@@ -53,28 +90,107 @@
           d="M19 9l-7 7-7-7"
         />
       </svg>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quia
-        iusto quis nisi in reiciendis harum earum aliquid. Dicta numquam error
-        consequatur reprehenderit voluptate quam provident voluptatem aperiam
-        repellendus deleniti!
-      </p>
-      <ul>
-        <li>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. voluptatem
-          iure fugiat
-        </li>
-        <li>
-          tempore et repudiandae quibusdam iure fugiat voluptatum nemo
-          voluptate.
-        </li>
-        <li>eligendi iusto, numquam, tempore et repudiandae quibusdam</li>
-        <li>Non, vero quae accusantium Officiis alias ipsa quo in?</li>
-        <li>
-          reprehenderit voluptate quam provident voluptatem aperiam repellendus
-          deleniti!
-        </li>
-      </ul>
+      <div class="hidden-box">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
+          quia iusto quis nisi in reiciendis harum earum aliquid. Dicta
+          numquam error consequatur reprehenderit voluptate quam provident
+          voluptatem aperiam repellendus deleniti!
+        </p>
+        <ul>
+          <li>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            voluptatem iure fugiat
+          </li>
+          <li>
+            tempore et repudiandae quibusdam iure fugiat voluptatum nemo
+            voluptate.
+          </li>
+          <li>eligendi iusto, numquam, tempore et repudiandae quibusdam</li>
+          <li>Non, vero quae accusantium Officiis alias ipsa quo in?</li>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="item">
+        <p class="number">02</p>
+        <p class="text">How long do i have to return the chair?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
+            quia iusto quis nisi in reiciendis harum earum aliquid. Dicta
+            numquam error consequatur reprehenderit voluptate quam provident
+            voluptatem aperiam repellendus deleniti!
+          </p>
+          <ul>
+            <li>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              voluptatem iure fugiat
+            </li>
+            <li>
+              tempore et repudiandae quibusdam iure fugiat voluptatum nemo
+              voluptate.
+            </li>
+            <li>eligendi iusto, numquam, tempore et repudiandae quibusdam</li>
+            <li>Non, vero quae accusantium Officiis alias ipsa quo in?</li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <p class="number">03</p>
+      <p class="text">Do you ship to countries outside the EU?</p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+      <div class="hidden-box">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
+          quia iusto quis nisi in reiciendis harum earum aliquid. Dicta
+          numquam error consequatur reprehenderit voluptate quam provident
+          voluptatem aperiam repellendus deleniti!
+        </p>
+        <ul>
+          <li>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            voluptatem iure fugiat
+          </li>
+          <li>
+            tempore et repudiandae quibusdam iure fugiat voluptatum nemo
+            voluptate.
+          </li>
+          <li>eligendi iusto, numquam, tempore et repudiandae quibusdam</li>
+          <li>Non, vero quae accusantium Officiis alias ipsa quo in?</li>
+          </li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
